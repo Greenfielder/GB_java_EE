@@ -12,6 +12,7 @@ public class HeaderServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+
         resp.getWriter().println("<link rel='stylesheet' href='" + req.getContextPath() + "/style.css'>");
 
         resp.getWriter().println("<H1>Заголовок заготовки магазина</H1>");

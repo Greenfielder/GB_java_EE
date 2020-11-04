@@ -12,6 +12,7 @@ public class CatalogServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+
         resp.setHeader("Header", "Catalog page");
         getServletContext().getRequestDispatcher("/page_header").include(req, resp);
         resp.getWriter().println("<h2>Каталог.</h2>");
@@ -19,6 +20,5 @@ public class CatalogServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
     }
 }
