@@ -12,6 +12,7 @@ public class CartServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+
         resp.setHeader("Header", "Cart page");
         getServletContext().getRequestDispatcher("/page_header").include(req, resp);
         resp.getWriter().println("<h2>Корзина</h2>");
@@ -19,6 +20,5 @@ public class CartServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
     }
 }
