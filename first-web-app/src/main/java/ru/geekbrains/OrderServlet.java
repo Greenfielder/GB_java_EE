@@ -14,7 +14,7 @@ public class OrderServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
         resp.setHeader("Header", "Order page");
-        getServletContext().getRequestDispatcher("/page_header").include(req, resp);
+        getServletContext().getRequestDispatcher("/WEB-INF/views/order.jsp").forward(req, resp);
         resp.getWriter().println("<h2>Заказ</h2>");
     }
 

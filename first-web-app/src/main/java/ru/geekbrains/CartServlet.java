@@ -14,7 +14,7 @@ public class CartServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
         resp.setHeader("Header", "Cart page");
-        getServletContext().getRequestDispatcher("/page_header").include(req, resp);
+        getServletContext().getRequestDispatcher("/WEB-INF/views/cart.jsp").forward(req, resp);
         resp.getWriter().println("<h2>Корзина</h2>");
     }
 
