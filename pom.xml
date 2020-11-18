@@ -12,6 +12,7 @@
     <modules>
 
         <module>first-web-app</module>
+        <module>jsf-web-app</module>
     </modules>
 
 
