@@ -1,11 +1,31 @@
 package ru.geekbrains.persist;
 
+import javax.persistence.*;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
+
+@Entity
+@Table(name = "products")
 public class Product {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    @NotEmpty
+    @Column(nullable = false)
     private String name;
+
+    @NotEmpty
+    @Column(nullable = false)
     private String description;
+
+    @NotEmpty
+    @Column(nullable = false)
     private int price;
+
+    @ManyToOne
+    private ProductCategory productCategory;
 
     public Product() {
     }
@@ -48,5 +68,13 @@ public class Product {
 
     public void setPrice(int price) {
         this.price = price;
+    }
+
+    public ProductCategory getProductCategory() {
+        return productCategory;
+    }
+
+    public void setProductCategory(ProductCategory productCategory) {
+        this.productCategory = productCategory;
     }
 }
